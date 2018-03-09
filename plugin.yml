@@ -1,5 +1,4 @@
 name: ConfigAPI
 author: TJPlaysNow
-main: com.pzg.www.api.config.PluginMain
+main: com.tjplaysnow.api.config.PluginMain
 version: 1.0
-commands: 

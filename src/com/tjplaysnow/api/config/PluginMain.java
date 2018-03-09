@@ -1,4 +1,4 @@
-package com.pzg.www.api.config;
+package com.tjplaysnow.api.config;
 import org.bukkit.plugin.java.JavaPlugin;
 public class PluginMain extends JavaPlugin {
 	/** Creating a new config */
