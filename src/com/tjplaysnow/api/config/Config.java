@@ -195,14 +195,16 @@ class ItemManager {
 		return item;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static ItemStack getSkull(String playerName) {
 		ItemStack item = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
 		SkullMeta im = (SkullMeta) item.getItemMeta();
-		im.setOwner(playerName);
+		im.setOwningPlayer(Bukkit.getOfflinePlayer(playerName));
 		item.setItemMeta(im);
 		return item;
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static ItemStack setNameAndLoreandSkull(String name, String playerName, String... lore) {
 		ItemStack item = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
 		SkullMeta im = (SkullMeta) item.getItemMeta();
@@ -212,7 +214,7 @@ class ItemManager {
 			il.add(l);
 		}
 		im.setLore(il);
-		im.setOwner(playerName);
+		im.setOwningPlayer(Bukkit.getOfflinePlayer(playerName));
 		item.setItemMeta(im);
 		return item;
 	}
